@@ -1,0 +1,126 @@
+:root {
+	--light: "HND-Light", sans-serif;
+	--lightItalic: "HND-LightItalic", sans-serif;
+	--regular: "HND-Regular", sans-serif;
+	--regularItalic: "HND-RegularItalic", sans-serif;
+	--medium: "HND-Medium", sans-serif;
+	--mediumItalic: "HND-MediumItalic", sans-serif;
+	--bold: "HND-Bold", sans-serif;
+	--boldItalic: "HND-BoldItalic", sans-serif;
+}
+
+
+* {
+	margin: 0;
+	padding: 0;
+	font-family: var(--regular);
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: var(--regular);
+	text-transform: uppercase;
+}
+
+
+*::-webkit-scrollbar {
+	width: 10px;
+	height: 10px;
+}
+*::-webkit-scrollbar-track {
+	background: transparent;
+}
+*::-webkit-scrollbar-thumb {
+	background-color: #1b7fbd;
+}
+*::-webkit-scrollbar-thumb:hover {
+	background-color: #186da2;
+}
+*::-webkit-scrollbar-thumb:active {
+	background-color: #166292;
+}
+
+html {
+	scroll-behavior: smooth;
+	user-select: none;
+	color: #ECECEC;
+	background: #242424;
+}
+
+a {
+	color: #B0B0B0;
+	text-decoration: underline;
+	text-underline-offset: 2px;
+	opacity: 0.7;
+	transition: 0.2s;
+}
+a:hover {
+	opacity: 1;
+	transition: 0.2s;
+}
+
+
+.flex {
+	display: flex;
+}
+.flexCol{
+	flex-direction: column;
+}
+.flexRow{
+	flex-direction: row;
+}
+
+
+#titlebar-close {
+	background: transparent;
+	opacity: 0.7;
+	transition: 0.2s;
+}
+#titlebar-close:hover {
+	background: #E7260888;
+	opacity: 1;
+	cursor: pointer;
+	transition: 0.2s;
+}
+#titlebar-maximize {
+	background: transparent;
+	opacity: 0.7;
+	transition: 0.2s;
+}
+#titlebar-maximize:hover {
+	background: #CACACA88;
+	opacity: 1;
+	cursor: pointer;
+	transition: 0.2s;
+}
+#titlebar-minimize {
+	background: transparent;
+	opacity: 0.7;
+	transition: 0.2s;
+}
+#titlebar-minimize:hover {
+	background: #CACACA88;
+	opacity: 1;
+	cursor: pointer;
+	transition: 0.2s;
+}
+
+
+.titlebarBtn{
+	background: #424242;
+	padding: 4px 8px;
+	align-items: center;
+	gap: 5px;
+	border-radius: 5px;
+	opacity: 0.7;
+	transition: 0.2s;
+}
+.titlebarBtn:hover{
+	opacity: 1;
+	cursor: pointer;
+	transition: 0.2s;
+}
+
+
+#qrcode img {
+	border-radius: 5px;
+}

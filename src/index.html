@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="stylesheet" href="/css/style.css">
+	<link rel="stylesheet" href="/css/fonts.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,300;0,6..12,400;0,6..12,500;0,6..12,600;0,6..12,700;1,6..12,300;1,6..12,400;1,6..12,500;1,6..12,600;1,6..12,700&display=swap" rel="stylesheet">
+
+	<script type="module" src="/main.js" defer></script>
+
+</head>
+
+<body>
+
+	<div class="flex flexCol" style="height: 100vh; width: 100%; position: fixed; top: 0; align-items: center; justify-content: center;">
+
+		<div id="titlebar" class="flex" style="width: 100%; height: 35px; align-items: center; justify-content: center;">
+			<div class="titlebarContainer flex" style="width: 100%; height: 100%; align-items: center; justify-content: space-between;">
+				<div class="flex" style="height: 100%; align-items: center; justify-content: center; padding-left: 10px;">
+					<img style="height: 10px;" src="assets/images/logo-text.png">
+					<span class="flex" style="font-size: 9px; font-family: var(--regular); color: #ECECEC; background: #1598E8; margin-left: 6px; padding: 2px 4px; border-radius: 4px; align-items: center; justify-content: center;">BETA</span>
+					<span class="flex" style="height: 100%; font-size: 10px; font-family: var(--light); color: #B0B0B0; margin-left: 6px; align-items: center;">v1.0.0</span>
+				</div>
+
+				<div style="height: 100%; display: flex; flex-direction: row; align-items: center; gap: 20px; z-index: 10;">
+					<span class="flex flexRow" style="align-items: center; gap: 10px;">
+						<span id="refreshBtn" class="titlebarBtn flex" title="Refresh">
+							<img style="height: 9px;" src="assets/images/ui/refresh.svg">
+							<span style="font-family: var(--light); font-size: 10px; letter-spacing: 0.5px;">Refresh</span>
+						</span>
+					</span>
+
+					<div class="flex flexRow" style="height: 100%;">
+						<div id="titlebar-minimize" title="Minimize" class="flex" style="height: 100%; width: 40px; align-items: center; justify-content: center;">
+							<img style="width: 8px;" src="assets/images/ui/minimize.svg">
+						</div>
+
+						<div id="titlebar-maximize" title="Maximize" class="flex" style="height: 100%; width: 40px; align-items: center; justify-content: center;">
+							<img style="width: 8px;" src="assets/images/ui/maximize.svg">
+						</div>
+
+						<div id="titlebar-close" title="Close" class="flex" style="height: 100%; width: 40px; align-items: center; justify-content: center;">
+							<img style="width: 8px;" src="assets/images/ui/close.svg">
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div data-tauri-drag-region style="position: fixed; top: 5px; left: 0; background: transparent; height: 25px; width: calc(100% - 120px);"></div>
+
+		<div class="flex flexRow" style="height: calc(100% - 30px); width: 100%; align-items: center; justify-content: center;">
+			<div class="flex flexCol" style="height: calc(100% - 40px); width: 100%; padding: 20px; justify-content: start; gap: 20px;">
+
+				<div class="flex flexRow" style="height: 30px; width: 100%; align-items: center; justify-content: space-between; gap: 20px;">
+					<h1 style="color: #1598E8; font-size: 24px; font-family: var(--light);">Games Library</h1>
+
+					<form id="gameSearchform" class="flex flexRow" style="height: 100%; width: 350px;">
+						<input type="text" id="gameSearchInput" style="color: #B0B0B0; background: #424242; width: 300px; padding: 8px 12px; border: none; border-radius: 8px 0px 0px 8px; outline: none;" placeholder="Enter Name ..." autocomplete="off" spellcheck="false" title="" required>
+
+						<button type="submit" id="gameSearchBtn" class="flex" style="background: #424242; align-items: center; justify-content: center; padding: 6px 12px; border: none; border-radius: 0px 8px 8px 0px; outline: none; cursor: not-allowed;">
+							<img id="gameSearchIcon" style="height: 70%; filter: invert(67%) sepia(0%) saturate(1281%) hue-rotate(151deg) brightness(130%) contrast(91%);" src="assets/images/ui/search.svg">
+						</button>
+					</form>
+				</div>
+
+				<div class="flex" style="height: calc(100% - 30px); width: 100%; background: #B0B0B0; overflow: auto;">
+
+					<div style="height: auto; width: 100%;">
+
+					</div>
+
+				</div>
+
+			</div>
+		</div>
+
+	</div>
+
+</body>
+
+</html>

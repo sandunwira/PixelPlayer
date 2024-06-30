@@ -1,0 +1,32 @@
+@font-face {
+	font-family: "HND-Light";
+	src: url("/assets/fonts/HelveticaNowDisplay-Light.otf") format("opentype");
+}
+@font-face {
+	font-family: "HND-LightItalic";
+	src: url("/assets/fonts/HelveticaNowDisplay-LightIta.otf") format("opentype");
+}
+@font-face {
+	font-family: "HND-Regular";
+	src: url("/assets/fonts/HelveticaNowDisplay-Regular.otf") format("opentype");
+}
+@font-face {
+	font-family: "HND-RegularItalic";
+	src: url("/assets/fonts/HelveticaNowDisplay-RegIta.otf") format("opentype");
+}
+@font-face {
+	font-family: "HND-Medium";
+	src: url("/assets/fonts/HelveticaNowDisplay-Medium.otf") format("opentype");
+}
+@font-face {
+	font-family: "HND-MediumItalic";
+	src: url("/assets/fonts/HelveticaNowDisplay-MedIta.otf") format("opentype");
+}
+@font-face {
+	font-family: "HND-Bold";
+	src: url("/assets/fonts/HelveticaNowDisplay-Bold.otf") format("opentype");
+}
+@font-face {
+	font-family: "HND-BoldItalic";
+	src: url("/assets/fonts/HelveticaNowDisplay-BoldIta.otf") format("opentype");
+}

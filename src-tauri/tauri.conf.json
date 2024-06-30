@@ -1,0 +1,107 @@
+{
+  "build": {
+    "beforeDevCommand": "",
+    "beforeBuildCommand": "",
+    "devPath": "../src",
+    "distDir": "../src",
+    "withGlobalTauri": true
+  },
+  "package": {
+    "productName": "PixelPlayer",
+    "version": "1.0.0"
+  },
+  "tauri": {
+    "allowlist": {
+      "all": false,
+      "shell": {
+        "all": false,
+        "open": true
+      },
+      "window": {
+        "all": false,
+        "close": true,
+        "hide": true,
+        "show": true,
+        "maximize": true,
+        "minimize": true,
+        "unmaximize": true,
+        "unminimize": true,
+        "startDragging": true
+      },
+      "fs": {
+        "all": true
+      },
+      "notification": {
+        "all": true
+      }
+    },
+    "bundle": {
+      "active": true,
+      "publisher": "Sandun Wiratunga",
+      "category": "Entertainment",
+      "copyright": "Sandun Wiratunga",
+      "icon": [
+        "icons/32x32.png",
+        "icons/128x128.png",
+        "icons/128x128@2x.png",
+        "icons/icon.icns",
+        "icons/icon.ico"
+      ],
+      "identifier": "PixelPlayer",
+      "shortDescription": "PixelPlayer",
+      "longDescription": "PixelPlayer is a simple desktop app for playing flash games",
+      "resources": [],
+      "externalBin": [],
+      "targets": "all",
+      "deb": {
+        "depends": []
+      },
+      "macOS": {
+        "entitlements": null,
+        "exceptionDomain": "",
+        "frameworks": [],
+        "providerShortName": null,
+        "signingIdentity": null
+      },
+      "appimage": {
+        "bundleMediaFramework": true
+      },
+      "windows": {
+        "certificateThumbprint": null,
+        "digestAlgorithm": "sha256",
+        "timestampUrl": "",
+        "allowDowngrades": false,
+        "wix": {
+          "language": "en-US"
+        }
+      }
+    },
+    "security": {
+      "csp": null
+    },
+    "updater": {
+      "active": true,
+      "dialog": true,
+      "endpoints": [
+        "https://raw.githubusercontent.com/sandunwira/TauriUpdater/main/pixelplayer.json"
+      ],
+      "windows": {
+        "installMode": "passive"
+      },
+      "pubkey": "dW50cnVzdGVkIGNvbW1lbnQ6IG1pbmlzaWduIHB1YmxpYyBrZXk6IDI5QjQwRUY2MzI5OUM4OUUKUldTZXlKa3k5ZzYwS1pwM2dMdDY5cGx4Z2U5UjZZVDU4MWZNemdzcnQrSUMvci94MHhvRkIxSkQK"
+    },
+    "windows": [
+      {
+        "title": "PixelPlayer",
+        "minWidth": 1400,
+        "minHeight": 700,
+        "url": "index.html",
+        "fullscreen": false,
+        "focus": true,
+        "resizable": true,
+        "decorations": false,
+        "center": true
+      }
+    ]
+  }
+}
