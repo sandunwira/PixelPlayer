@@ -1,0 +1,74 @@
+[
+	{
+		"id": 1,
+		"name": "The Ashes",
+		"image": "assets/images/games/the-ashes.jpg",
+		"link": "assets/games/the-ashes.swf"
+	},
+	{
+		"id": 2,
+		"name": "Commando 2",
+		"image": "assets/images/games/commando-2.jpg",
+		"link": "assets/games/commando-2.swf"
+	},
+	{
+		"id": 3,
+		"name": "3 Foot Ninja",
+		"image": "assets/images/games/3-foot-ninja.jpg",
+		"link": "assets/games/3-foot-ninja.swf"
+	},
+	{
+		"id": 4,
+		"name": "3 Foot Ninja II",
+		"image": "assets/images/games/3-foot-ninja-ii.jpg",
+		"link": "assets/games/3-foot-ninja-ii.swf"
+	},
+	{
+		"id": 5,
+		"name": "Stan Skates",
+		"image": "assets/images/games/stan-skates.jpg",
+		"link": "assets/games/stan-skates.swf"
+	},
+	{
+		"id": 6,
+		"name": "Alien Clones",
+		"image": "assets/images/games/alien-clones.jpg",
+		"link": "assets/games/alien-clones.swf"
+	},
+	{
+		"id": 7,
+		"name": "Mission Mars",
+		"image": "assets/images/games/mission-mars.jpg",
+		"link": "assets/games/mission-mars.swf"
+	},
+	{
+		"id": 8,
+		"name": "Penguin Push",
+		"image": "assets/images/games/penguin-push.jpg",
+		"link": "assets/games/penguin-push.swf"
+	},
+	{
+		"id": 9,
+		"name": "Reel Gold",
+		"image": "assets/images/games/reel-gold.jpg",
+		"link": "assets/games/reel-gold.swf"
+	},
+	{
+		"id": 10,
+		"name": "Rigelian Hot Shots",
+		"image": "assets/images/games/rigelian-hotshots.jpg",
+		"link": "assets/games/rigelian-hotshots.swf"
+	},
+	{
+		"id": 11,
+		"name": "Samurai Warrior",
+		"image": "assets/images/games/samurai-warrior.jpg",
+		"link": "assets/games/samurai-warrior.swf"
+	},
+	{
+		"id": 12,
+		"name": "Park A Lot",
+		"image": "assets/images/games/park-a-lot.jpg",
+		"link": "assets/games/park-a-lot.swf"
+	}
+]

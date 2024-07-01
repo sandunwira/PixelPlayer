@@ -19,8 +19,3 @@ for (let i = 0; i < images.length; i++) {
 document.addEventListener('contextmenu', function (e) {
 	e.preventDefault();
 });
-
-
-refreshBtn.addEventListener('click', () => {
-	window.location.reload();
-});
