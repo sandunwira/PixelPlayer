@@ -12,13 +12,16 @@
 	<script type="module" src="/main.js" defer></script>
 	<script src="js/gamePlayer.js" defer></script>
 	<script src="assets/ruffle/ruffle.js" defer></script>
+	<script src="js/popups/about.js" defer></script>
 
 	<!-- PRELOADING CSS/JS/JSON -->
 	<link rel="preload" href="css/fonts.css" as="style" type="text/css">
 	<link rel="preload" href="css/style.css" as="style" type="text/css">
-	<link rel="preload" href="js/localGames.js" as="script" type="text/javascript">
-	<link rel="preload" href="js/gamePlayer.js" as="script" type="text/javascript">
 	<link rel="preload" href="localgames.json" as="fetch" crossorigin>
+	<link rel="preload" href="assets/ruffle/ruffle.js" as="script" type="text/javascript">
+	<link rel="preload" href="js/gamePlayer.js" as="script" type="text/javascript">
+	<link rel="preload" href="js/library.js" as="script" type="text/javascript">
+	<link rel="preload" href="js/popups/about.js" as="script" type="text/javascript">
 	<!-- PRELOADING FONTS -->
 	<link rel="preload" href="assets/fonts/HelveticaNowDisplay-Bold.otf" as="font" type="font/otf" crossorigin>
 	<link rel="preload" href="assets/fonts/HelveticaNowDisplay-BoldIta.otf" as="font" type="font/otf" crossorigin>
@@ -29,15 +32,22 @@
 	<link rel="preload" href="assets/fonts/HelveticaNowDisplay-RegIta.otf" as="font" type="font/otf" crossorigin>
 	<link rel="preload" href="assets/fonts/HelveticaNowDisplay-Regular.otf" as="font" type="font/otf" crossorigin>
 	<!-- PRELOADING UI ICONS -->
+	<link rel="preload" href="assets/images/ui/about.svg" as="image" type="image/svg+xml">
 	<link rel="preload" href="assets/images/ui/back.svg" as="image" type="image/svg+xml">
 	<link rel="preload" href="assets/images/ui/close.svg" as="image" type="image/svg+xml">
+	<link rel="preload" href="assets/images/ui/credits.svg" as="image" type="image/svg+xml">
 	<link rel="preload" href="assets/images/ui/delete.svg" as="image" type="image/svg+xml">
+	<link rel="preload" href="assets/images/ui/external.svg" as="image" type="image/svg+xml">
+	<link rel="preload" href="assets/images/ui/feedback.svg" as="image" type="image/svg+xml">
+	<link rel="preload" href="assets/images/ui/ghost.svg" as="image" type="image/svg+xml">
+	<link rel="preload" href="assets/images/ui/loader.svg" as="image" type="image/svg+xml">
 	<link rel="preload" href="assets/images/ui/maximize.svg" as="image" type="image/svg+xml">
 	<link rel="preload" href="assets/images/ui/minimize.svg" as="image" type="image/svg+xml">
 	<link rel="preload" href="assets/images/ui/mute.svg" as="image" type="image/svg+xml">
 	<link rel="preload" href="assets/images/ui/play.svg" as="image" type="image/svg+xml">
 	<link rel="preload" href="assets/images/ui/refresh.svg" as="image" type="image/svg+xml">
 	<link rel="preload" href="assets/images/ui/search.svg" as="image" type="image/svg+xml">
+	<link rel="preload" href="assets/images/ui/send.svg" as="image" type="image/svg+xml">
 	<link rel="preload" href="assets/images/ui/unmute.svg" as="image" type="image/svg+xml">
 	<!-- PRELOADING IMAGES -->
 	<link rel="preload" href="assets/images/logo-text.png" as="image" type="image/png">
@@ -59,7 +69,7 @@
 		<div id="titlebar" class="flex" style="width: 100%; height: 35px; align-items: center; justify-content: center;">
 			<div class="titlebarContainer flex" style="width: 100%; height: 100%; align-items: center; justify-content: space-between;">
 				<div class="flex" style="height: 100%; align-items: center; justify-content: center; padding-left: 10px;">
-					<img style="height: 10px;" src="assets/images/logo-text.png">
+					<img style="height: 10px; margin-top: 1px;" src="assets/images/logo-text.png">
 					<span class="flex" style="font-size: 9px; font-family: var(--regular); color: #ECECEC; background: #1598E8; margin-left: 6px; padding: 2px 4px; border-radius: 4px; align-items: center; justify-content: center;">BETA</span>
 					<span class="flex" style="height: 100%; font-size: 10px; font-family: var(--light); color: #B0B0B0; margin-left: 6px; align-items: center;">v1.0.0</span>
 				</div>
@@ -70,6 +80,12 @@
 							<img style="height: 10px; animation: spinLoader 1s linear infinite;" src="assets/images/ui/loader.svg">
 							<span style="font-family: var(--light); font-size: 10px; letter-spacing: 0.5px;">Audio</span>
 						</span>
+
+						<span id="aboutBtn" class="titlebarBtn flex" title="About PixelPlayer">
+							<img style="height: 10px;" src="assets/images/ui/about.svg">
+							<span style="font-family: var(--light); font-size: 10px; letter-spacing: 0.5px;">About</span>
+						</span>
+
 						<span id="refreshBtn" class="titlebarBtn flex" title="Refresh">
 							<img style="height: 10px;" src="assets/images/ui/refresh.svg">
 							<span style="font-family: var(--light); font-size: 10px; letter-spacing: 0.5px;">Refresh</span>
@@ -94,14 +110,17 @@
 		</div>
 		<div data-tauri-drag-region style="position: fixed; top: 5px; left: 0; background: transparent; height: 25px; width: calc(100% - 120px);"></div>
 
+
+		<div id="aboutPopup" class="popup"></div>
+
+
 		<div class="flex flexRow" style="height: calc(100% - 30px); width: 100%; align-items: center; justify-content: center;">
 			<div class="flex flexCol" style="height: calc(100% - 40px); width: 100%; padding: 20px; justify-content: start; gap: 20px;">
-
 				<div class="flex flexRow" style="height: 30px; width: 100%; align-items: center; justify-content: space-between; gap: 20px;">
-					<a class="flex flexRow" style="align-items: center; text-decoration: none; opacity: 1; gap: 10px;" href="/">
+					<span class="flex flexRow" style="align-items: center; gap: 10px; cursor: pointer;" onclick="history.back();">
 						<img style="height: 18px; filter: invert(53%) sepia(20%) saturate(6760%) hue-rotate(176deg) brightness(94%) contrast(94%);" src="assets/images/ui/back.svg">
 						<h1 id="gameTitle" style="color: #1598E8; font-size: 24px; font-family: var(--light);"></h1>
-					</a>
+					</span>
 
 					<form id="gameSearchform" class="flex flexRow" style="height: 100%; width: 350px;">
 						<input type="text" id="gameSearchInput" style="color: #B0B0B0; background: #424242; width: 300px; padding: 8px 12px; border: none; border-radius: 8px 0px 0px 8px; outline: none;" placeholder="Enter Name ..." autocomplete="off" spellcheck="false" title="" required>
@@ -113,11 +132,8 @@
 				</div>
 
 				<div class="flex" style="height: calc(100% - 30px); width: 100%; background: #424242;">
-
 					<div id="gameContainer" style="height: 100%; width: 100%;"></div>
-
 				</div>
-
 			</div>
 		</div>
 

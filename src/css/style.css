@@ -147,6 +147,46 @@ ruffle-player {
 }
 
 
+input[type="text"], input[type="password"], input[type="email"], input[type="number"], input[type="tel"], input[type="url"], input[type="search"] {
+	color: #B0B0B0;
+	background: #424242;
+	padding: 8px 12px;
+	border: none;
+	border-radius: 8px 0px 0px 8px;
+	opacity: 0.7;
+	outline: none;
+	transition: 0.2s;
+}
+input[type="text"]:focus, input[type="password"]:focus, input[type="email"]:focus, input[type="number"]:focus, input[type="tel"]:focus, input[type="url"]:focus, input[type="search"]:focus {
+	opacity: 1;
+	transition: 0.2s;
+}
+
+
+
+#aboutPopupCloseBtn {
+	filter: invert(61%) sepia(38%) saturate(5928%) hue-rotate(176deg) brightness(91%) contrast(100%);
+}
+#aboutPopupCloseBtn:hover {
+	filter: none;
+	cursor: pointer;
+}
+
+
+.popup {
+	display: none;
+	height: calc(100% - 35px);
+	width: 100%;
+	background: transparent;
+	position: fixed;
+	top: 35px;
+	left: 0px;
+	z-index: 100;
+	align-items: center;
+	justify-content: center;
+	backdrop-filter: blur(40px);
+}
+
 
 /* ANIMATIONS START ============================================= */
 @keyframes spinLoader {

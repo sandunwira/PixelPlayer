@@ -1,6 +1,4 @@
 // DISPLAY GAME DETAILS IN THE PLAYER PAGE START ============================================================ //
-const refreshBtn = document.getElementById("refreshBtn");
-
 window.RufflePlayer = window.RufflePlayer || {};
 window.RufflePlayer.config = {
 	"allowScriptAccess": false,
@@ -89,9 +87,5 @@ window.addEventListener("load", (event) => {
 			localStorage.setItem("volume", 1);
 		}
 	});
-});
-
-refreshBtn.addEventListener("click", () => {
-	location.reload();
 });
 // ============================================================== DISPLAY GAME DETAILS IN THE PLAYER PAGE END //

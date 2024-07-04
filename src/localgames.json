@@ -70,5 +70,23 @@
 		"name": "Park A Lot",
 		"image": "assets/images/games/park-a-lot.jpg",
 		"link": "assets/games/park-a-lot.swf"
+	},
+	{
+		"id": 13,
+		"name": "Trapshoot",
+		"image": "assets/images/games/trapshoot.jpg",
+		"link": "assets/games/trapshoot.swf"
+	},
+	{
+		"id": 14,
+		"name": "Battleships General Quarters",
+		"image": "assets/images/games/battleships-general-quarters.jpg",
+		"link": "assets/games/battleships-general-quarters.swf"
+	},
+	{
+		"id": 15,
+		"name": "Bob The Robber",
+		"image": "assets/images/games/bob-the-robber.jpg",
+		"link": "assets/games/bob-the-robber.swf"
 	}
 ]

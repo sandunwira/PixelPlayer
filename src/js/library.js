@@ -3,6 +3,30 @@ const gameSearchInput = document.getElementById('gameSearchInput');
 const gameSearchBtn = document.getElementById('gameSearchBtn');
 const gameSearchIcon = document.getElementById('gameSearchIcon');
 
+const gameCardsContainer = document.getElementById('gameCardsContainer');
+
+fetch('localgames.json')
+	.then(response => response.json())
+	.then(data => {
+		gameCardsContainer.innerHTML = data.map(game => `
+			<div class="gameCard flex flexCol" style="height: auto; width: 15%; min-width: 150px; background: #424242; align-items: start; border-radius: 10px;">
+				<div style="height: 250px; width: 100%;">
+					<img class="gameIcon" src="${game.image}" style="height: 100%; width: 100%; object-fit: cover; border-radius: 10px 10px 0 0;" alt="Game Image">
+				</div>
+				<div class="flex flexCol" style="width: calc(100% - 40px); padding: 20px; align-items: start; justify-content: center; gap: 10px;">
+					<h1 style="font-size: 16px; width: 100%; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;" title="${game.name}">${game.name}</h1>
+					<a href="player.html#${game.id}" class="flex flexRow" style="padding: 6px 12px; font-size: 12px; text-decoration: none; text-transform: uppercase; color: #ECECEC; background: #1598E8; align-items: center; border-radius: 5px; gap: 5px;">
+						<img src="assets/images/ui/play.svg" style="height: 10px;"> Play
+					</a>
+				</div>
+			</div>
+		`).join('');
+	})
+	.catch(error => {
+		console.error(error);
+	});
+
+
 gameSearchform.addEventListener('submit', e => {
 	e.preventDefault();
 });
@@ -26,7 +50,7 @@ gameSearchInput.addEventListener('input', () => {
 
 				if (searchResults.length === 0) {
 					gameCardsContainer.innerHTML = `
-						<div class="flex flexCol" style="height: calc(100% - 3px); width: calc(100% - 3px); border: 1.5px dashed #B0B0B0; border-radius: 8px; align-items: center; justify-content: center; gap: 30px;">
+						<div class="flex flexCol" style="height: 100%; width: 100%; align-items: center; justify-content: center; gap: 30px;">
 							<img src="assets/images/ui/ghost.svg" style="height: 200px; filter: invert(61%) sepia(38%) saturate(5928%) hue-rotate(176deg) brightness(91%) contrast(100%);">
 							<p class="flex flexCol" style="width: 100%; font-size: 18px; text-transform: uppercase; font-family: var(--light); color: #B0B0B0; align-items: center;">
 								No Results Found For
@@ -41,7 +65,7 @@ gameSearchInput.addEventListener('input', () => {
 								<img class="gameIcon" src="${game.image}" style="height: 100%; width: 100%; object-fit: cover; border-radius: 10px 10px 0 0;" alt="Game Image">
 							</div>
 							<div class="flex flexCol" style="width: calc(100% - 40px); padding: 20px; align-items: start; justify-content: center; gap: 10px;">
-								<h1 style="font-size: 16px;">${game.name}</h1>
+								<h1 style="font-size: 16px; width: 100%; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;" title="${game.name}">${game.name}</h1>
 								<a href="player.html#${game.id}" class="flex flexRow" style="padding: 6px 12px; font-size: 12px; text-decoration: none; text-transform: uppercase; color: #ECECEC; background: #1598E8; align-items: center; border-radius: 5px; gap: 5px;">
 									<img src="assets/images/ui/play.svg" style="height: 10px;"> Play
 								</a>
@@ -66,7 +90,7 @@ gameSearchInput.addEventListener('input', () => {
 							<img class="gameIcon" src="${game.image}" style="height: 100%; width: 100%; object-fit: cover; border-radius: 10px 10px 0 0;" alt="Game Image">
 						</div>
 						<div class="flex flexCol" style="width: calc(100% - 40px); padding: 20px; align-items: start; justify-content: center; gap: 10px;">
-							<h1 style="font-size: 16px;">${game.name}</h1>
+							<h1 style="font-size: 16px; width: 100%; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;" title="${game.name}">${game.name}</h1>
 							<a href="player.html#${game.id}" class="flex flexRow" style="padding: 6px 12px; font-size: 12px; text-decoration: none; text-transform: uppercase; color: #ECECEC; background: #1598E8; align-items: center; border-radius: 5px; gap: 5px;">
 								<img src="assets/images/ui/play.svg" style="height: 10px;"> Play
 							</a>
