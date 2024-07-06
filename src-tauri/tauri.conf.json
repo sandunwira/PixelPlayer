@@ -31,6 +31,12 @@
       "fs": {
         "all": true
       },
+      "clipboard": {
+        "all": true
+      },
+      "dialog": {
+        "all": true
+      },
       "notification": {
         "all": true
       }

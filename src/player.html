@@ -11,8 +11,9 @@
 
 	<script type="module" src="/main.js" defer></script>
 	<script src="js/gamePlayer.js" defer></script>
+	<script src="js/timeTracker.js" defer></script>
 	<script src="assets/ruffle/ruffle.js" defer></script>
-	<script src="js/popups/about.js" defer></script>
+	<script src="js/popups.js" defer></script>
 
 	<!-- PRELOADING CSS/JS/JSON -->
 	<link rel="preload" href="css/fonts.css" as="style" type="text/css">
@@ -21,7 +22,8 @@
 	<link rel="preload" href="assets/ruffle/ruffle.js" as="script" type="text/javascript">
 	<link rel="preload" href="js/gamePlayer.js" as="script" type="text/javascript">
 	<link rel="preload" href="js/library.js" as="script" type="text/javascript">
-	<link rel="preload" href="js/popups/about.js" as="script" type="text/javascript">
+	<link rel="preload" href="js/popups.js" as="script" type="text/javascript">
+	<link rel="preload" href="js/timeTracker.js" as="script" type="text/javascript">
 	<!-- PRELOADING FONTS -->
 	<link rel="preload" href="assets/fonts/HelveticaNowDisplay-Bold.otf" as="font" type="font/otf" crossorigin>
 	<link rel="preload" href="assets/fonts/HelveticaNowDisplay-BoldIta.otf" as="font" type="font/otf" crossorigin>
@@ -35,6 +37,7 @@
 	<link rel="preload" href="assets/images/ui/about.svg" as="image" type="image/svg+xml">
 	<link rel="preload" href="assets/images/ui/back.svg" as="image" type="image/svg+xml">
 	<link rel="preload" href="assets/images/ui/close.svg" as="image" type="image/svg+xml">
+	<link rel="preload" href="assets/images/ui/copy.svg" as="image" type="image/svg+xml">
 	<link rel="preload" href="assets/images/ui/credits.svg" as="image" type="image/svg+xml">
 	<link rel="preload" href="assets/images/ui/delete.svg" as="image" type="image/svg+xml">
 	<link rel="preload" href="assets/images/ui/external.svg" as="image" type="image/svg+xml">
@@ -48,6 +51,7 @@
 	<link rel="preload" href="assets/images/ui/refresh.svg" as="image" type="image/svg+xml">
 	<link rel="preload" href="assets/images/ui/search.svg" as="image" type="image/svg+xml">
 	<link rel="preload" href="assets/images/ui/send.svg" as="image" type="image/svg+xml">
+	<link rel="preload" href="assets/images/ui/stats.svg" as="image" type="image/svg+xml">
 	<link rel="preload" href="assets/images/ui/unmute.svg" as="image" type="image/svg+xml">
 	<!-- PRELOADING IMAGES -->
 	<link rel="preload" href="assets/images/logo-text.png" as="image" type="image/png">
@@ -81,6 +85,11 @@
 							<span style="font-family: var(--light); font-size: 10px; letter-spacing: 0.5px;">Audio</span>
 						</span>
 
+						<span id="statsBtn" class="titlebarBtn flex" title="Stats">
+							<img style="height: 10px;" src="assets/images/ui/stats.svg">
+							<span style="font-family: var(--light); font-size: 10px; letter-spacing: 0.5px;">Stats</span>
+						</span>
+
 						<span id="aboutBtn" class="titlebarBtn flex" title="About PixelPlayer">
 							<img style="height: 10px;" src="assets/images/ui/about.svg">
 							<span style="font-family: var(--light); font-size: 10px; letter-spacing: 0.5px;">About</span>
@@ -112,9 +121,10 @@
 
 
 		<div id="aboutPopup" class="popup"></div>
+		<div id="statsPopup" class="popup"></div>
 
 
-		<div class="flex flexRow" style="height: calc(100% - 30px); width: 100%; align-items: center; justify-content: center;">
+		<div class="flex flexRow" style="height: calc(100% - 35px); width: 100%; align-items: center; justify-content: center;">
 			<div class="flex flexCol" style="height: calc(100% - 40px); width: 100%; padding: 20px; justify-content: start; gap: 20px;">
 				<div class="flex flexRow" style="height: 30px; width: 100%; align-items: center; justify-content: space-between; gap: 20px;">
 					<span class="flex flexRow" style="align-items: center; gap: 10px; cursor: pointer;" onclick="history.back();">
