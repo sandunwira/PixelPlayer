@@ -2,90 +2,105 @@
 	{
 		"id": 1,
 		"name": "The Ashes",
+		"description": "The Ashes is a cricket game where you lead England or Australia in the legendary Ashes series",
 		"image": "assets/images/games/the-ashes.jpg",
 		"link": "assets/games/the-ashes.swf"
 	},
 	{
 		"id": 2,
 		"name": "Commando 2",
+		"description": "Commando 2 is a side-scrolling action game where you fight your way through hordes of enemies as a soldier",
 		"image": "assets/images/games/commando-2.jpg",
 		"link": "assets/games/commando-2.swf"
 	},
 	{
 		"id": 3,
 		"name": "3 Foot Ninja",
+		"description": "3 Foot Ninja is an action-adventure game where you play as a tiny ninja warrior, who is a skilled combatant that utilizes his sword and throwing stars (shurikens) to battle enemies",
 		"image": "assets/images/games/3-foot-ninja.jpg",
 		"link": "assets/games/3-foot-ninja.swf"
 	},
 	{
 		"id": 4,
 		"name": "3 Foot Ninja II",
+		"description": "3 Foot Ninja II is an action platformer where you control a tiny ninja warrior on a quest to save a princess from evil forces",
 		"image": "assets/images/games/3-foot-ninja-ii.jpg",
 		"link": "assets/games/3-foot-ninja-ii.swf"
 	},
 	{
 		"id": 5,
 		"name": "Stan Skates",
+		"description": "Stan Skates is a retro skateboarding game where you play as Stan, who skateboards through the city",
 		"image": "assets/images/games/stan-skates.jpg",
 		"link": "assets/games/stan-skates.swf"
 	},
 	{
 		"id": 6,
 		"name": "Alien Clones",
+		"description": "Alien Clones is a fast-paced side-scrolling shooter where you battle waves of aliens",
 		"image": "assets/images/games/alien-clones.jpg",
 		"link": "assets/games/alien-clones.swf"
 	},
 	{
 		"id": 7,
 		"name": "Mission Mars",
+		"description": "Mission Mars is a side-scrolling shoot 'em up game where you pilot a red UFO and destroy buildings on Mars",
 		"image": "assets/images/games/mission-mars.jpg",
 		"link": "assets/games/mission-mars.swf"
 	},
 	{
 		"id": 8,
 		"name": "Penguin Push",
+		"description": "Penguin Push is a puzzle game where you use a penguin to push boxes on an ice field",
 		"image": "assets/images/games/penguin-push.jpg",
 		"link": "assets/games/penguin-push.swf"
 	},
 	{
 		"id": 9,
 		"name": "Reel Gold",
+		"description": "Reel Gold is a side-scrolling mining game where you control a miner in a mine cart",
 		"image": "assets/images/games/reel-gold.jpg",
 		"link": "assets/games/reel-gold.swf"
 	},
 	{
 		"id": 10,
 		"name": "Rigelian Hot Shots",
+		"description": "Rigelian Hot Shots is an arcade game where you control a fireball with a tail",
 		"image": "assets/images/games/rigelian-hotshots.jpg",
 		"link": "assets/games/rigelian-hotshots.swf"
 	},
 	{
 		"id": 11,
 		"name": "Samurai Warrior",
+		"description": "Samurai Warrior is a fighting game where you choose from a variety of Samurai warriors to battle against AI opponents or other players",
 		"image": "assets/images/games/samurai-warrior.jpg",
 		"link": "assets/games/samurai-warrior.swf"
 	},
 	{
 		"id": 12,
-		"name": "Park A Lot",
+		"name": "Park-A-Lot",
+		"description": "Park-A-Lot is a car parking game where you maneuver vehicles into designated parking spots",
 		"image": "assets/images/games/park-a-lot.jpg",
 		"link": "assets/games/park-a-lot.swf"
 	},
 	{
 		"id": 13,
 		"name": "Trapshoot",
+		"description": "Trapshoot is a casual shooting game where you shoot clay pigeons, chickens, and even beer cans out of the sky",
 		"image": "assets/images/games/trapshoot.jpg",
 		"link": "assets/games/trapshoot.swf"
 	},
 	{
 		"id": 14,
 		"name": "Battleships General Quarters",
+		"description": "Battleships General Quarters 2 is a turn-based strategy game where you take command of a fleet and battle an opponent on a grid-based battlefield",
 		"image": "assets/images/games/battleships-general-quarters.jpg",
 		"link": "assets/games/battleships-general-quarters.swf"
 	},
 	{
 		"id": 15,
 		"name": "Bob The Robber",
+		"description": "Bob The Robber is a puzzle platformer game where you play as Bob, a thief trying to steal loot from various houses",
 		"image": "assets/images/games/bob-the-robber.jpg",
 		"link": "assets/games/bob-the-robber.swf"
 	}

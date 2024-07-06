@@ -1,6 +1,5 @@
-// Assuming game ID is determined by the URL, for example, using a hash like '#15'
 function getGameIdFromUrl() {
-	return window.location.hash.substring(1); // Extracts the game ID from the URL hash
+	return window.location.hash.substring(1);
 }
 
 function startGame() {
@@ -29,13 +28,10 @@ function updateTotalTime(gameId, timeSpent) {
 }
 
 
-// Automatically start tracking when the page loads
 window.onload = startGame;
 
-// Automatically end tracking when the page is about to be unloaded
 window.onbeforeunload = endGame;
 
-// Optionally, display the total time spent on page load for the current game
 window.onload = function () {
 	const gameId = getGameIdFromUrl();
 	startGame();

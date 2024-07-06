@@ -60,6 +60,12 @@ window.addEventListener('load', () => {
 			statsBtn.style.color = "#ECECEC";
 			statsBtn.style.background = "#424242";
 			statsBtn.style.transition = "0.3s";
+		} else if (randomGamePopup.style.display === 'flex') {
+			randomGamePopup.style.display = 'none';
+			randomGameBtn.innerHTML = `<img style="height: 10px;" src="assets/images/ui/random.svg"><span style="font-family: var(--light); font-size: 10px; letter-spacing: 0.5px;">Random</span>`;
+			randomGameBtn.style.color = "#ECECEC";
+			randomGameBtn.style.background = "#424242";
+			randomGameBtn.style.transition = "0.3s";
 		}
 
 		if (aboutPopup.style.display === 'flex') {
@@ -103,7 +109,7 @@ var statsHTML = `
 				</p>
 
 				<span class="flex flexRow" style="align-items: center; gap: 15px;">
-					<button class="titlebarBtn flex" style="color: #ECECEC; padding: 5px 10px; border: none;" title="This action is irreversible" onclick="localStorage.clear(); location.reload();">
+					<button class="titlebarBtn flex" style="color: #ECECEC; padding: 5px 10px; border: none;" title="Clear Records" onclick="clearRecords()">
 						<img style="height: 14px;" src="assets/images/ui/delete.svg">
 						<span style="font-family: var(--light); font-size: 14px; letter-spacing: 0.5px;">Clear Records</span>
 					</button>
@@ -119,6 +125,15 @@ var statsHTML = `
 `;
 
 
+function clearRecords() {
+	localStorage.clear();
+	setTimeout(() => {
+		window.location.reload();
+		alert('All records have been cleared!\nTo see the new statistics, click on the Stats button again.');
+	}, 500);
+};
+
+
 function copyStatsToClipboard() {
 	const statsContainer = document.getElementById('statsContainer');
 	const statsText = Array.from(statsContainer.children)
@@ -130,8 +145,8 @@ function copyStatsToClipboard() {
 		.join('\n');
 
 	navigator.clipboard.writeText('PixelPlayer Statistics:\n\n' + statsText)
-		.then(() => alert('Stats copied to clipboard!'))
-		.catch(error => console.error('Error copying stats to clipboard:', error));
+		.then(() => alert('Statistics copied to clipboard!'))
+		.catch(error => console.error('Error copying statistics to clipboard:', error));
 };
 
 
@@ -157,6 +172,12 @@ window.addEventListener('load', () => {
 			aboutBtn.style.color = "#ECECEC";
 			aboutBtn.style.background = "#424242";
 			aboutBtn.style.transition = "0.3s";
+		} else if (randomGamePopup.style.display === 'flex') {
+			randomGamePopup.style.display = 'none';
+			randomGameBtn.innerHTML = `<img style="height: 10px;" src="assets/images/ui/random.svg"><span style="font-family: var(--light); font-size: 10px; letter-spacing: 0.5px;">Random</span>`;
+			randomGameBtn.style.color = "#ECECEC";
+			randomGameBtn.style.background = "#424242";
+			randomGameBtn.style.transition = "0.3s";
 		}
 
 		if (statsPopup.style.display === 'flex') {
@@ -230,3 +251,114 @@ document.addEventListener('DOMContentLoaded', function () {
 	});
 });
 // ======================================================================== STATS POPUP END //
+
+
+// RANDOM GAME POPUP START ================================================================ //
+const randomGamePopup = document.getElementById('randomGamePopup');
+const randomGameBtn = document.getElementById('randomGameBtn');
+
+
+function getRandomGame() {
+	fetch('localgames.json')
+		.then(response => response.json())
+		.then(games => {
+			// Select a random game
+			const randomIndex = Math.floor(Math.random() * games.length);
+			const randomGame = games[randomIndex];
+
+			// Update the game image, name, and description
+			const id = randomGame.id;
+			const image = randomGame.image;
+			const name = randomGame.name;
+			const description = randomGame.description;
+
+			var randomGameHTML = `
+				<div class="flex flexCol" style="max-height: calc(100% - 80px); height: auto; min-width: 400px; width: 65%; background: #424242; border-radius: 10px; align-items: center; justify-content: center;">
+					<div class="flex flexCol" style="height: calc(100% - 80px); width: calc(100% - 60px); padding: 30px 30px 50px 30px; gap: 10px; background: #242424; border-radius: 10px; overflow: auto;">
+						<div class="flex flexCol" style="width: 100%; align-items: center; gap: 50px;">
+							<div class="flex" style="height: 65px; width: auto; padding: 40px 0 0 0; align-items: center; justify-content: center; margin-bottom: -40px;">
+								<img src="assets/images/logo-text.png" style="height: 100%; width: auto;">
+							</div>
+
+							<h1 style="color: #1598E8; font-family: var(--light); font-size: 16px;">Random Game</h1>
+
+							<div class="flex flexRow" style="height: 150px; width: 70%; color: #ECECEC; background: #424242; align-items: center; border-radius: 10px;">
+								<div style="height: 150px; width: 150px; border-radius: 10px;">
+									<img src="${image}" style="height: 100%; width: 100%; object-fit: cover; border-radius: 10px 0px 0px 10px;" alt="Photo of ${name}">
+								</div>
+
+								<div class="flex flexCol" style="height: calc(100% - 40px); width: calc(100% - 190px); padding: 20px; align-items: start; justify-content: start; gap: 15px;">
+									<h1 style="font-family: var(--light); font-size: 18px; width: 100%; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;" title="${name}">${name}</h1>
+									<p style="color: #B0B0B0; font-family: var(--light); font-size: 14px; width: 100%; line-height: 1.4; letter-spacing: 0.2px; white-space: normal; overflow: hidden; text-overflow: ellipsis;" title="">${description}</p>
+								</div>
+							</div>
+
+							<span class="flex flexRow" style="align-items: center; gap: 15px;">
+								<a class="titlebarBtn flex" style="color: #ECECEC; padding: 5px 10px; text-decoration: none;" title="Play ${name}" href="player.html#${id}">
+									<img style="height: 14px;" src="assets/images/ui/play.svg">
+									<span style="font-family: var(--light); font-size: 14px; letter-spacing: 0.5px;">Play Game</span>
+								</a>
+
+								<button class="titlebarBtn flex" style="color: #ECECEC; padding: 5px 10px; border: none;" title="Shuffle Again" onclick="getRandomGame()">
+									<img style="height: 14px;" src="assets/images/ui/refresh.svg">
+									<span style="font-family: var(--light); font-size: 14px; letter-spacing: 0.5px;">Shuffle Again</span>
+								</button>
+							</span>
+						</div>
+					</div>
+				</div>
+			`;
+
+			randomGamePopup.innerHTML = randomGameHTML;
+		})
+		.catch(error => console.error('Error fetching game data:', error));
+}
+
+
+
+window.addEventListener('load', () => {
+	getRandomGame();
+
+	randomGamePopup.style.display = 'none';
+
+	randomGamePopup.addEventListener('click', (e) => {
+		if (e.target === randomGamePopup) {
+			randomGamePopup.style.display = 'none';
+			randomGameBtn.innerHTML = `<img style="height: 10px;" src="assets/images/ui/random.svg"><span style="font-family: var(--light); font-size: 10px; letter-spacing: 0.5px;">Random</span>`;
+			randomGameBtn.style.color = "#ECECEC";
+			randomGameBtn.style.background = "#424242";
+			randomGameBtn.style.transition = "0.3s";
+		}
+	});
+
+	randomGameBtn.addEventListener('click', () => {
+		if (statsPopup.style.display === 'flex') {
+			statsPopup.style.display = 'none';
+			statsBtn.innerHTML = `<img style="height: 10px;" src="assets/images/ui/stats.svg"><span style="font-family: var(--light); font-size: 10px; letter-spacing: 0.5px;">Stats</span>`;
+			statsBtn.style.color = "#ECECEC";
+			statsBtn.style.background = "#424242";
+			statsBtn.style.transition = "0.3s";
+		} else if (aboutPopup.style.display === 'flex') {
+			aboutPopup.style.display = 'none';
+			aboutBtn.innerHTML = `<img style="height: 10px;" src="assets/images/ui/about.svg"><span style="font-family: var(--light); font-size: 10px; letter-spacing: 0.5px;">About</span>`;
+			aboutBtn.style.color = "#ECECEC";
+			aboutBtn.style.background = "#424242";
+			aboutBtn.style.transition = "0.3s";
+		}
+
+		if (randomGamePopup.style.display === 'flex') {
+			randomGamePopup.style.display = 'none';
+			randomGameBtn.innerHTML = `<img style="height: 10px;" src="assets/images/ui/random.svg"><span style="font-family: var(--light); font-size: 10px; letter-spacing: 0.5px;">Random</span>`;
+			randomGameBtn.style.color = "#ECECEC";
+			randomGameBtn.style.background = "#424242";
+			randomGameBtn.style.transition = "0.3s";
+		} else {
+			randomGamePopup.style.display = 'flex';
+			randomGameBtn.innerHTML = `<img style="height: 10px; filter: invert(99%) sepia(7%) saturate(31%) hue-rotate(343deg) brightness(104%) contrast(85%);" src="assets/images/ui/random.svg"><span style="font-family: var(--light); font-size: 10px; letter-spacing: 0.5px;">Random</span>`;
+			randomGameBtn.style.color = "#242424";
+			randomGameBtn.style.background = "#ECECEC";
+			randomGameBtn.style.transition = "0.3s";
+		}
+	});
+});
+// ================================================================== RANDOM GAME POPUP END //

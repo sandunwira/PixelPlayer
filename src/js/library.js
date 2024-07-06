@@ -8,8 +8,11 @@ const gameCardsContainer = document.getElementById('gameCardsContainer');
 fetch('localgames.json')
 	.then(response => response.json())
 	.then(data => {
+		const libraryGamesCount = document.getElementById('libraryGamesCount');
+		libraryGamesCount.textContent = `- ${data.length} Games Found`;
+
 		gameCardsContainer.innerHTML = data.map(game => `
-			<div class="gameCard flex flexCol" style="height: auto; width: 15%; min-width: 150px; background: #424242; align-items: start; border-radius: 10px;">
+			<div class="gameCard flex flexCol" style="height: auto; width: 100%; min-width: 150px; background: #424242; align-items: start; border-radius: 10px;">
 				<div style="height: 250px; width: 100%;">
 					<img class="gameIcon" src="${game.image}" style="height: 100%; width: 100%; object-fit: cover; border-radius: 10px 10px 0 0;" alt="Game Image">
 				</div>

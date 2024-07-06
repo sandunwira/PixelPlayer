@@ -80,12 +80,17 @@
 
 				<div style="height: 100%; display: flex; flex-direction: row; align-items: center; gap: 20px; z-index: 10;">
 					<span class="flex flexRow" style="align-items: center; gap: 10px;">
+						<span id="randomGameBtn" class="titlebarBtn flex" title="Random Game" style="display: none;">
+							<img style="height: 10px;" src="assets/images/ui/random.svg">
+							<span style="font-family: var(--light); font-size: 10px; letter-spacing: 0.5px;">Random</span>
+						</span>
+
 						<span id="soundBtn" class="titlebarBtn flex">
 							<img style="height: 10px; animation: spinLoader 1s linear infinite;" src="assets/images/ui/loader.svg">
 							<span style="font-family: var(--light); font-size: 10px; letter-spacing: 0.5px;">Audio</span>
 						</span>
 
-						<span id="statsBtn" class="titlebarBtn flex" title="Stats">
+						<span id="statsBtn" class="titlebarBtn flex" title="Game Statistics">
 							<img style="height: 10px;" src="assets/images/ui/stats.svg">
 							<span style="font-family: var(--light); font-size: 10px; letter-spacing: 0.5px;">Stats</span>
 						</span>
@@ -95,7 +100,7 @@
 							<span style="font-family: var(--light); font-size: 10px; letter-spacing: 0.5px;">About</span>
 						</span>
 
-						<span id="refreshBtn" class="titlebarBtn flex" title="Refresh">
+						<span id="refreshBtn" class="titlebarBtn flex" title="Something isn't Working? Try Refresh">
 							<img style="height: 10px;" src="assets/images/ui/refresh.svg">
 							<span style="font-family: var(--light); font-size: 10px; letter-spacing: 0.5px;">Refresh</span>
 						</span>
@@ -122,6 +127,7 @@
 
 		<div id="aboutPopup" class="popup"></div>
 		<div id="statsPopup" class="popup"></div>
+		<div id="randomGamePopup" class="popup"></div>
 
 
 		<div class="flex flexRow" style="height: calc(100% - 35px); width: 100%; align-items: center; justify-content: center;">
