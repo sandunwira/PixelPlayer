@@ -216,8 +216,22 @@ function displayTotalTimeSpentAcrossAllGames() {
 	const totalTimeInSeconds = Math.floor(aggregatedTotalTime / 1000);
 	const hours = Math.floor(totalTimeInSeconds / 3600);
 	const minutes = Math.floor((totalTimeInSeconds % 3600) / 60);
+	const seconds = Math.floor(totalTimeInSeconds % 60);
 
-	totalGameTimeElement.textContent = `${hours}h ${minutes}m`;
+	let totalGameTime = '';
+
+	if (hours === 0 && minutes === 0) {
+		totalGameTime = `${seconds}s`;
+	} else if (hours === 0) {
+		totalGameTime = `${minutes}m ${seconds}s`;
+	} else {
+		totalGameTime = `${hours}h ${minutes}m`;
+	}
+	if (aggregatedTotalTime === null || aggregatedTotalTime === 0) {
+		totalGameTime = 'Not Available Yet';
+	}
+
+	totalGameTimeElement.textContent = totalGameTime;
 }
 
 
@@ -235,7 +249,19 @@ document.addEventListener('DOMContentLoaded', function () {
 					const totalTimeInSeconds = Math.floor(totalTime / 1000);
 					const hours = Math.floor(totalTimeInSeconds / 3600);
 					const minutes = Math.floor((totalTimeInSeconds % 3600) / 60);
-					const formattedTime = `${hours}h ${minutes}m`;
+					const seconds = Math.floor(totalTimeInSeconds % 60);
+					let formattedTime = '';
+
+					if (hours === 0 && minutes === 0) {
+						formattedTime = `${seconds}s`;
+					} else if (hours === 0) {
+						formattedTime = `${minutes}m ${seconds}s`;
+					} else {
+						formattedTime = `${hours}h ${minutes}m`;
+					}
+					if (totalTime === null || totalTime === 0) {
+						formattedTime = '-';
+					}
 
 					const gameItem = document.createElement('span');
 					gameItem.className = 'flex flexRow';
