@@ -103,5 +103,12 @@
 		"description": "Bob The Robber is a puzzle platformer game where you play as Bob, a thief trying to steal loot from various houses",
 		"image": "assets/images/games/bob-the-robber.jpg",
 		"link": "assets/games/bob-the-robber.swf"
+	},
+	{
+		"id": 16,
+		"name": "Fancy Pants Adventure",
+		"description": "Fancy Pants Adventure is a platformer game where you control a stick figure character with baggy pants",
+		"image": "assets/images/games/fancy-pants-adventure.jpg",
+		"link": "assets/games/fancy-pants-adventure.swf"
 	}
 ]

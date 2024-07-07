@@ -228,7 +228,7 @@ function displayTotalTimeSpentAcrossAllGames() {
 		totalGameTime = `${hours}h ${minutes}m`;
 	}
 	if (aggregatedTotalTime === null || aggregatedTotalTime === 0) {
-		totalGameTime = 'Not Available Yet';
+		totalGameTime = '-';
 	}
 
 	totalGameTimeElement.textContent = totalGameTime;
