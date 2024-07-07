@@ -3,14 +3,20 @@ const gameSearchInput = document.getElementById('gameSearchInput');
 const gameSearchBtn = document.getElementById('gameSearchBtn');
 const gameSearchIcon = document.getElementById('gameSearchIcon');
 
+const libraryGamesCount = document.getElementById('libraryGamesCount');
 const gameCardsContainer = document.getElementById('gameCardsContainer');
 
 fetch('localgames.json')
 	.then(response => response.json())
 	.then(data => {
-		const libraryGamesCount = document.getElementById('libraryGamesCount');
-		libraryGamesCount.textContent = `- ${data.length} Games Found`;
+		count = data.length;
+		if (count === 1) {
+			libraryGamesCount.textContent = `- ${data.length} Game Found`;
+		} else {
+			libraryGamesCount.textContent = `- ${data.length} Games Found`;
+		}
 
+		gameCardsContainer.style.display = 'grid';
 		gameCardsContainer.innerHTML = data.map(game => `
 			<div class="gameCard flex flexCol" style="height: auto; width: 100%; min-width: 150px; background: #424242; align-items: start; border-radius: 10px;">
 				<div style="height: 250px; width: 100%;">
@@ -52,8 +58,10 @@ gameSearchInput.addEventListener('input', () => {
 				console.log(searchResults);
 
 				if (searchResults.length === 0) {
+					libraryGamesCount.textContent = ``;
+					gameCardsContainer.style.display = 'flex';
 					gameCardsContainer.innerHTML = `
-						<div class="flex flexCol" style="height: 100%; width: 100%; align-items: center; justify-content: center; gap: 30px;">
+						<div class="flex flexCol" style="height: 100%; width: 100%; align-items: center; justify-content: center; gap: 30px; z-index: 10;">
 							<img src="assets/images/ui/ghost.svg" style="height: 200px; filter: invert(61%) sepia(38%) saturate(5928%) hue-rotate(176deg) brightness(91%) contrast(100%);">
 							<p class="flex flexCol" style="width: 100%; font-size: 18px; text-transform: uppercase; font-family: var(--light); color: #B0B0B0; align-items: center;">
 								No Results Found For
@@ -62,8 +70,16 @@ gameSearchInput.addEventListener('input', () => {
 						</div>
 					`;
 				} else {
+					count = searchResults.length;
+					if (count === 1) {
+						libraryGamesCount.textContent = `- ${searchResults.length} Game Found`;
+					} else {
+						libraryGamesCount.textContent = `- ${searchResults.length} Games Found`;
+					}
+
+					gameCardsContainer.style.display = 'grid';
 					gameCardsContainer.innerHTML = searchResults.map(game => `
-						<div class="gameCard flex flexCol" style="height: auto; width: 15%; min-width: 150px; background: #424242; align-items: start; border-radius: 10px;">
+						<div class="gameCard flex flexCol" style="height: auto; width: 100%; min-width: 150px; background: #424242; align-items: start; border-radius: 10px;">
 							<div style="height: 250px; width: 100%;">
 								<img class="gameIcon" src="${game.image}" style="height: 100%; width: 100%; object-fit: cover; border-radius: 10px 10px 0 0;" alt="Game Image">
 							</div>
@@ -87,8 +103,16 @@ gameSearchInput.addEventListener('input', () => {
 		fetch('localgames.json')
 			.then(response => response.json())
 			.then(data => {
+				count = data.length;
+				if (count === 1) {
+					libraryGamesCount.textContent = `- ${data.length} Game Found`;
+				} else {
+					libraryGamesCount.textContent = `- ${data.length} Games Found`;
+				}
+
+				gameCardsContainer.style.display = 'grid';
 				gameCardsContainer.innerHTML = data.map(game => `
-					<div class="gameCard flex flexCol" style="height: auto; width: 15%; min-width: 150px; background: #424242; align-items: start; border-radius: 10px;">
+					<div class="gameCard flex flexCol" style="height: auto; width: 100%; min-width: 150px; background: #424242; align-items: start; border-radius: 10px;">
 						<div style="height: 250px; width: 100%;">
 							<img class="gameIcon" src="${game.image}" style="height: 100%; width: 100%; object-fit: cover; border-radius: 10px 10px 0 0;" alt="Game Image">
 						</div>

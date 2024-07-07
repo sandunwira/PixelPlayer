@@ -110,5 +110,103 @@
 		"description": "Fancy Pants Adventure is a platformer game where you control a stick figure character with baggy pants",
 		"image": "assets/images/games/fancy-pants-adventure.jpg",
 		"link": "assets/games/fancy-pants-adventure.swf"
+	},
+	{
+		"id": 17,
+		"name": "Bubble Shooter",
+		"description": "Bubble Shooter is a puzzle game where you shoot colored bubbles to match three or more of the same color",
+		"image": "assets/images/games/bubble-shooter.jpg",
+		"link": "assets/games/bubble-shooter.swf"
+	},
+	{
+		"id": 18,
+		"name": "Samurai Jack: Code of the Samurai",
+		"description": "Samurai Jack: Code of the Samurai is a side-scrolling action game where you play as Samurai Jack, a samurai warrior on a quest to defeat the evil Aku",
+		"image": "assets/images/games/samurai-jack-code-of-the-samurai.jpg",
+		"link": "assets/games/samurai-jack-code-of-the-samurai.swf"
+	},
+	{
+		"id": 19,
+		"name": "Cat Ninja",
+		"description": "Cat Ninja is a tile-based action puzzle game where you control a nimble cat ninja",
+		"image": "assets/images/games/cat-ninja.jpg",
+		"link": "assets/games/cat-ninja.swf"
+	},
+	{
+		"id": 20,
+		"name": "Flash Tetris",
+		"description": "Flash Tetris is a classic puzzle game where you arrange falling blocks to create complete lines",
+		"image": "assets/images/games/flash-tetris.jpg",
+		"link": "assets/games/flash-tetris.swf"
+	},
+	{
+		"id": 21,
+		"name": "Henry Stickmin: Breaking the Bank",
+		"description": "Henry Stickmin: Breaking the Bank is a point-and-click adventure game where you help Henry Stickmin pull off a bank heist",
+		"image": "assets/images/games/henry-stickmin-breaking-the-bank.jpg",
+		"link": "assets/games/henry-stickmin-breaking-the-bank.swf"
+	},
+	{
+		"id": 22,
+		"name": "Henry Stickmin: Escaping the Prison",
+		"description": "Henry Stickmin: Escaping the Prison is a point-and-click adventure game where you help Henry Stickmin escape from a high-security prison",
+		"image": "assets/images/games/henry-stickmin-escaping-the-prison.jpg",
+		"link": "assets/games/henry-stickmin-escaping-the-prison.swf"
+	},
+	{
+		"id": 23,
+		"name": "Henry Stickmin: Fleeing the Complex",
+		"description": "Henry Stickmin: Fleeing the Complex is a point-and-click adventure game where you help Henry Stickmin escape from a high-security complex",
+		"image": "assets/images/games/henry-stickmin-fleeing-the-complex.jpg",
+		"link": "assets/games/henry-stickmin-fleeing-the-complex.swf"
+	},
+	{
+		"id": 24,
+		"name": "Henry Stickmin: Infiltrating the Airship",
+		"description": "Henry Stickmin: Infiltrating the Airship is a point-and-click adventure game where you help Henry Stickmin infiltrate an airship",
+		"image": "assets/images/games/henry-stickmin-infiltrating-the-airship.jpg",
+		"link": "assets/games/henry-stickmin-infiltrating-the-airship.swf"
+	},
+	{
+		"id": 25,
+		"name": "Pacman",
+		"description": "Pacman is a classic arcade game where you control Pacman, a yellow circle that eats dots while avoiding ghosts",
+		"image": "assets/images/games/pacman.jpg",
+		"link": "assets/games/pacman.swf"
+	},
+	{
+		"id": 26,
+		"name": "Chasm",
+		"description": "Chasm is a platformer game where you control a character who explores a series of caves and tunnels",
+		"image": "assets/images/games/chasm.jpg",
+		"link": "assets/games/chasm.swf"
+	},
+	{
+		"id": 27,
+		"name": "Cannon Blast",
+		"description": "Cannon Blast is a casual shooting game where you shoot cannonballs at pirate ships",
+		"image": "assets/images/games/cannon-blast.jpg",
+		"link": "assets/games/cannon-blast.swf"
+	},
+	{
+		"id": 28,
+		"name": "Cheese Hunt",
+		"description": "Cheese Hunt is a puzzle game where you help a mouse collect cheese while avoiding traps",
+		"image": "assets/images/games/cheese-hunt.jpg",
+		"link": "assets/games/cheese-hunt.swf"
+	},
+	{
+		"id": 29,
+		"name": "Heli Attack 2",
+		"description": "Heli Attack 2 is a side-scrolling shooter where you battle helicopters",
+		"image": "assets/images/games/heli-attack-2.jpg",
+		"link": "assets/games/heli-attack-2.swf"
+	},
+	{
+		"id": 30,
+		"name": "ChalkZone: Double Trouble",
+		"description": "ChalkZone: Double Trouble is a platformer game where you control Rudy and Penny as they explore the ChalkZone",
+		"image": "assets/images/games/chalkzone-double-trouble.jpg",
+		"link": "assets/games/chalkzone-double-trouble.swf"
 	}
 ]
