@@ -208,5 +208,47 @@
 		"description": "ChalkZone: Double Trouble is a platformer game where you control Rudy and Penny as they explore the ChalkZone",
 		"image": "assets/images/games/chalkzone-double-trouble.jpg",
 		"link": "assets/games/chalkzone-double-trouble.swf"
+	},
+	{
+		"id": 31,
+		"name": "Armed With Wings 3",
+		"description": "Armed With Wings 3 is a side-scrolling action game where you control a warrior with a sword and wings",
+		"image": "assets/images/games/armed-with-wings-3.jpg",
+		"link": "assets/games/armed-with-wings-3.swf"
+	},
+	{
+		"id": 32,
+		"name": "Red Beard",
+		"description": "Red Beard is a side-scrolling platform adventure game where you take charge of the swashbuckling Red Beard",
+		"image": "assets/images/games/red-beard.jpg",
+		"link": "assets/games/red-beard.swf"
+	},
+	{
+		"id": 33,
+		"name": "Ben 10 Kraken Attack",
+		"description": "Ben 10 Kraken Attack is an action game where you control Ben 10 as he battles the Kraken",
+		"image": "assets/images/games/ben-10-kraken-attack.jpg",
+		"link": "assets/games/ben-10-kraken-attack.swf"
+	},
+	{
+		"id": 34,
+		"name": "Powerpuff Girls: Attack of the Puppybots",
+		"description": "Powerpuff Girls: Attack of the Puppybots is a side-scrolling action game where you battle the puppybots as Blossom, Bubbles, or Buttercup",
+		"image": "assets/images/games/powerpuff-girls-attack-of-the-puppybots.jpg",
+		"link": "assets/games/powerpuff-girls-attack-of-the-puppybots.swf"
+	},
+	{
+		"id": 35,
+		"name": "Scooby Doo and the Creepy Castle",
+		"description": "Scooby Doo and the Creepy Castle is a platformer game where you control Scooby Doo as he explores a haunted castle",
+		"image": "assets/images/games/scooby-doo-and-the-creepy-castle.jpg",
+		"link": "assets/games/scooby-doo-and-the-creepy-castle.swf"
+	},
+	{
+		"id": 36,
+		"name": "Tom and Jerry Bowling",
+		"description": "Tom and Jerry Bowling is a bowling game where you play as Tom or Jerry and try to knock down pins",
+		"image": "assets/images/games/tom-and-jerry-bowling.jpg",
+		"link": "assets/games/tom-and-jerry-bowling.swf"
 	}
 ]
