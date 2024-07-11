@@ -30,6 +30,12 @@ var aboutHTML = `
 						<span style="font-family: var(--light); font-size: 14px; letter-spacing: 0.5px;">Submit Flash Games</span>
 						<img style="height: 12px; filter: invert(61%) sepia(38%) saturate(5928%) hue-rotate(176deg) brightness(150%) contrast(100%);" src="assets/images/ui/external.svg">
 					</a>
+
+					<a class="titlebarBtn flex" style="color: #ECECEC; padding: 5px 10px; text-decoration: none;" title="This will open the browser" target="_blank" href="https://bit.ly/PixelPlayerDonate">
+						<img style="height: 14px;" src="assets/images/ui/donate.svg">
+						<span style="font-family: var(--light); font-size: 14px; letter-spacing: 0.5px;">Donate</span>
+						<img style="height: 12px; filter: invert(61%) sepia(38%) saturate(5928%) hue-rotate(176deg) brightness(150%) contrast(100%);" src="assets/images/ui/external.svg">
+					</a>
 				</span>
 
 				<p style="color: #B0B0B0; font-family: var(--light); font-size: 10px;">Version: 1.0.0</p>
