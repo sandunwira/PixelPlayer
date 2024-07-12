@@ -1,6 +1,6 @@
 [package]
 name = "pixelplayer"
-version = "1.0.0"
+version = "1.1.0"
 description = "PixelPlayer is a simple desktop app for playing flash games"
 authors = ["Sandun Wiratunga"]
 license = ""

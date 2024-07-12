@@ -38,7 +38,7 @@ var aboutHTML = `
 					</a>
 				</span>
 
-				<p style="color: #B0B0B0; font-family: var(--light); font-size: 10px;">Version: 1.0.0</p>
+				<p style="color: #B0B0B0; font-family: var(--light); font-size: 10px;">Version: 1.1.0</p>
 			</div>
 		</div>
 	</div>
