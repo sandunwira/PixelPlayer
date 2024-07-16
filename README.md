@@ -53,7 +53,11 @@ Do you have a favorite Flash game that you'd love to see in PixelPlayer? Share i
 
 ## Support
 
-For any questions, issues, or feedback, please feel free to open an issue on our GitHub repository or contact us directly on **pixelplayerteam@gmail.com**
+For any questions, issues, or feedback, Please feel free to provide from below links:
+
+- **[GitHub Issue](https://github.com/sandunwira/PixelPlayer/issues)**
+- **[Google Form](https://forms.gle/Fwh1TJgYMdW2z7Zi8)**
+- **[Email](pixelplayerteam@gmail.com)**
 
 ***Let's bring back the magic of Flash gaming together!***
 
